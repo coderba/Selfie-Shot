@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/share_layout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/drawing_view_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_above="@+id/share_button_panel">
+
+
+            <!-- image of taken photo -->
+        <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:id="@+id/photo_taken_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/ad_view"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-5815672211123105/8550483077"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/share_button_panel"
+            android:layout_width="match_parent"
+            android:background="#CCFAFCFD"
+            android:gravity="bottom"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible">
+
+
+
+            <!--<Button-->
+            <!--android:id="@+id/button_facebook"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="fb" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/button_twitter"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="tw" />-->
+            <!--<Button-->
+            <!--android:id="@+id/button_instagram"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="ins" />-->
+
+            <ImageView
+                android:id="@+id/button_sticker"
+                android:src="@drawable/smile_1"
+                android:layout_marginLeft="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <ImageButton
+                android:id="@+id/button_share"
+
+                android:foregroundGravity="center_horizontal"
+                android:background="@drawable/share_red"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="fb"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/save_button"
+                android:src="@drawable/checkmark_red"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/sticker_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_above="@+id/share_button_panel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/smile_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/smile_1"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smile_1"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/smile_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/smile_2"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smile_2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/smile_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/smile_3"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smile_3"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/smile_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/smile_4"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smile_4"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/smile_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/smile_5"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smile_5"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sticker_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sticker_1"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker1"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sticker_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sticker_2"
+
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_three">
+                    <ImageView
+                        android:id="@+id/sticker_3"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker3"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_four">
+                    <ImageView
+                        android:id="@+id/sticker_4"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker4"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_five">
+                    <ImageView
+                        android:id="@+id/sticker_5"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker5"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_six">
+                    <ImageView
+                        android:id="@+id/sticker_6"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker6"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_seven">
+                    <ImageView
+                        android:id="@+id/sticker_7"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sticker_eight">
+                    <ImageView
+                        android:id="@+id/sticker_8"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sticker8"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss1">
+                    <ImageView
+                        android:id="@+id/special_sticker_1"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_1"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss2">
+                    <ImageView
+                        android:id="@+id/special_sticker_2"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss3">
+                    <ImageView
+                        android:id="@+id/special_sticker_3"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_3"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss4">
+                    <ImageView
+                        android:id="@+id/special_sticker_4"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_4"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss5">
+                    <ImageView
+                        android:id="@+id/special_sticker_5"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_5"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss6">
+                    <ImageView
+                        android:id="@+id/special_sticker_6"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_6"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss7">
+                    <ImageView
+                        android:id="@+id/special_sticker_7"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss8">
+                    <ImageView
+                        android:id="@+id/special_sticker_8"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_8"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss9">
+                    <ImageView
+                        android:id="@+id/special_sticker_9"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_9"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss10">
+                    <ImageView
+                        android:id="@+id/special_sticker_10"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_10"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss11">
+                    <ImageView
+                        android:id="@+id/special_sticker_11"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_11"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss12">
+                    <ImageView
+                        android:id="@+id/special_sticker_12"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_12"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss13">
+                    <ImageView
+                        android:id="@+id/special_sticker_13"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_13"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss14">
+                    <ImageView
+                        android:id="@+id/special_sticker_14"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_14"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss15">
+                    <ImageView
+                        android:id="@+id/special_sticker_15"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_15"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss16">
+                    <ImageView
+                        android:id="@+id/special_sticker_16"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_16"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss17">
+                    <ImageView
+                        android:id="@+id/special_sticker_17"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_17"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss18">
+                    <ImageView
+                        android:id="@+id/special_sticker_18"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_18"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss19">
+                    <ImageView
+                        android:id="@+id/special_sticker_19"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_19"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss20">
+                    <ImageView
+                        android:id="@+id/special_sticker_20"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_20"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss21">
+                    <ImageView
+                        android:id="@+id/special_sticker_21"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_21"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss22">
+                    <ImageView
+                        android:id="@+id/special_sticker_22"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_22"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss23">
+                    <ImageView
+                        android:id="@+id/special_sticker_23"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_23"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss24">
+                    <ImageView
+                        android:id="@+id/special_sticker_24"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_24"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss25">
+                    <ImageView
+                        android:id="@+id/special_sticker_25"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_25"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss26">
+                    <ImageView
+                        android:id="@+id/special_sticker_26"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_26"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss27">
+                    <ImageView
+                        android:id="@+id/special_sticker_27"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_27"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss28">
+                    <ImageView
+                        android:id="@+id/special_sticker_28"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_28"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss29">
+                    <ImageView
+                        android:id="@+id/special_sticker_29"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_29"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss30">
+                    <ImageView
+                        android:id="@+id/special_sticker_30"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_30"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss31">
+                    <ImageView
+                        android:id="@+id/special_sticker_31"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_31"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss32">
+                    <ImageView
+                        android:id="@+id/special_sticker_32"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_32"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss33">
+                    <ImageView
+                        android:id="@+id/special_sticker_33"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_33"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss34">
+                    <ImageView
+                        android:id="@+id/special_sticker_34"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_34"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss35">
+                    <ImageView
+                        android:id="@+id/special_sticker_35"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_35"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss36">
+                    <ImageView
+                        android:id="@+id/special_sticker_36"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_36"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss37">
+                    <ImageView
+                        android:id="@+id/special_sticker_37"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_37"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ss38">
+                    <ImageView
+                        android:id="@+id/special_sticker_38"
+                        android:layout_width="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/special_sticker_38"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/share_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicator="BallGridPulse"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:indicator_color="#F93707"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

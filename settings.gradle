@@ -1,0 +1,2 @@
+include ':library', ':selfieshot2', ':ImageViewTouch2'
+project(':selfieshot2').projectDir = new File('selfieshot')

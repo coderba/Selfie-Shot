@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_dialog_child">
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/discrete2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dsb_allowTrackClickToDrag="false"
+        app:dsb_indicatorTextAppearance="@style/CustomFloaterTextAppearance"
+        app:dsb_progressColor="@color/my_progress_color"
+        app:dsb_rippleColor="#FF7788FF"
+        app:dsb_indicatorColor="@color/my_floater_color"
+        app:dsb_indicatorFormatter="\\o/ %d"
+        app:dsb_min="0"
+        app:dsb_max="10"/>
+
+
+
+</RelativeLayout>

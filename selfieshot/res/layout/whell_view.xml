@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wheel_layout"
+    android:background="#CCFAFCFD"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.lantouzi.wheelview.WheelView
+        android:id="@+id/wheel_view_item"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        app:lwvHighlightColor="#FB3707"
+        app:lwvMarkColor="#EEEEEE"
+        app:lwvMarkTextColor="#CACACA"
+        app:lwvMarkTextSize="12sp"
+        android:background="#E6222222"/>
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/checkmark_red"
+        android:id="@+id/button_timer_select"
+        android:layout_gravity="center_horizontal" />
+
+
+
+</LinearLayout>

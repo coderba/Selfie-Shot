@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">HD Camera</string>
+    <string name="title_activity_activity_main">HD Camera</string>
+    <string name="facebook_app_id">885194054929261</string>
+    <string name="error">error</string>
+    <string name="success">success</string>
+    <string name="ok">ok</string>
+    <string name="successfully_posted_post">successfully posted post</string>
+    <string name="banner_id">ca-app-pub-5815672211123105/8131680673</string>
+    <string name="banner_id_gecis">ca-app-pub-5815672211123105/9608413877</string>
+
+</resources>

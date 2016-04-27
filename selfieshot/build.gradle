@@ -1,0 +1,97 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1002
+        versionName '1.02'
+    }
+    compileOptions.encoding = 'windows-1251' // write your encoding here
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+    lintOptions {
+        abortOnError true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    productFlavors {
+    }
+}
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url 'https://maven.fabric.io/public' }
+
+
+}
+
+dependencies {
+    compile project(':library')
+    compile project(':ImageViewTouch2')
+    //    compile 'jp.co.cyberagent.android.gpu_image:gpu_image-library:+@aar'
+    //    compile 'com.android.support:support-v4:21.+'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.github.nostra13:Android-Universal-Image-Loader:v1.9.5'
+    //    compile 'com.github.oxoooo:touch-image-view:1.0.1'
+    compile 'it.sephiroth.android.library.horizontallistview:hlistview:1.2.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+    compile 'org.adw.library:discrete-seekbar:1.0.0'
+    compile 'com.lantouzi.wheelview:library:1.1.1'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics-ndk:1.1.2@aar') {
+        transitive = true;
+    }
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    crashlytics {
+        enableNdk true
+        androidNdkOut 'src/main/obj'
+        androidNdkLibsOut 'src/main/libs'
+    }
+    compile('com.crashlytics.sdk.android:crashlytics-ndk:1.1.2@aar') {
+        transitive = true;
+    }
+    crashlytics {
+        enableNdk true
+        androidNdkOut 'src/main/obj'
+        androidNdkLibsOut 'src/main/libs'
+    }
+    compile 'com.wang.avi:library:1.0.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+}
+crashlytics {
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
+    enableNdk true
+    enableNdk true
+}
